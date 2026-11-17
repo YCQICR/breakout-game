@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>打砖块</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-wrap">
+    <h1>我的打砖块</h1>
+    <div class="hud">
+      <span>得分：<strong id="score">0</strong></span>
+      <span>剩余砖块：<strong id="bricks-left">0</strong></span>
+    </div>
+    <div class="canvas-box">
+      <canvas id="game" width="640" height="420"></canvas>
+      <div id="overlay" class="overlay hidden">
+        <p id="overlay-title" class="overlay-title">游戏结束</p>
+        <p id="overlay-text" class="overlay-text"></p>
+        <button id="restart" type="button">重新开始</button>
+      </div>
+    </div>
+    <p class="tips">用 ← → 方向键（或 A / D 键）左右移动挡板，按 P 键可暂停 / 继续</p>
+    <div class="buttons">
+      <button id="pause" type="button" class="control-btn">暂停</button>
+      <button id="resume" type="button" class="control-btn" disabled>继续</button>
+      <button id="restart-bottom" type="button" class="restart-btn">重新开始</button>
+    </div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
